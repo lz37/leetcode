@@ -18,6 +18,14 @@ class Solution {
   }
 
 public:
+  /**
+   * @brief
+   * 36/36 cases passed (148 ms)
+   * Your runtime beats 34.16 % of cpp submissions
+   * Your memory usage beats 41.15 % of cpp submissions (12.3 MB)
+   * @param people
+   * @return vector<vector<int>>
+   */
   vector<vector<int>> reconstructQueue(vector<vector<int>> &people) {
     sort(people.begin(), people.end(), cmp);
     // after sort the example we get this vector:
@@ -29,9 +37,6 @@ public:
     }
     return res;
   }
-  // 36/36 cases passed (148 ms)
-  // Your runtime beats 34.16 % of cpp submissions
-  // Your memory usage beats 41.15 % of cpp submissions (12.3 MB)
 };
 // @lc code=end
 class MySolution {
@@ -50,6 +55,14 @@ private:
   }
 
 public:
+  /**
+   * @brief
+   * 36/36 cases passed (528 ms)
+   * Your runtime beats 5.11 % of cpp submissions
+   * Your memory usage beats 89.94 % of cpp submissions (11.5 MB)
+   * @param people
+   * @return vector<vector<int>>
+   */
   vector<vector<int>> reconstructQueue(vector<vector<int>> &people) {
     vector<int> biggers(people.size());
     for (int i = 0; i < people.size(); i++) {
@@ -75,7 +88,4 @@ public:
     }
     return people;
   }
-  // 36/36 cases passed (528 ms)
-  // Your runtime beats 5.11 % of cpp submissions
-  // Your memory usage beats 89.94 % of cpp submissions (11.5 MB)
 };

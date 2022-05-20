@@ -29,6 +29,16 @@ private:
   }
 
 public:
+  /**
+   * @brief
+   * 24/24 cases passed (4 ms)
+   * Your runtime beats 46.42 % of cpp submissions
+   * Your memory usage beats 5.07 % of cpp submissions (8.6 MB)
+   * @param equations
+   * @param values
+   * @param queries
+   * @return vector<double>
+   */
   vector<double> calcEquation(vector<vector<string>> &equations,
                               vector<double> &values,
                               vector<vector<string>> &queries) {
@@ -45,8 +55,5 @@ public:
     }
     return ans;
   }
-  // 24/24 cases passed (4 ms)
-  // Your runtime beats 46.42 % of cpp submissions
-  // Your memory usage beats 5.07 % of cpp submissions (8.6 MB)
 };
 // @lc code=end

@@ -8,6 +8,15 @@ using namespace std;
 // @lc code=start
 class Solution {
 public:
+  /**
+   * @brief
+   * 117/117 cases passed (124 ms)
+   * Your runtime beats 82.51 % of cpp submissions
+   * Your memory usage beats 36.1 % of cpp submissions (12.1 MB)
+   * @param nums
+   * @return true
+   * @return false
+   */
   bool canPartition(vector<int> &nums) {
     int sum = 0;
     for (auto num : nums)
@@ -39,8 +48,5 @@ public:
       return false;
     }
   }
-  // 117/117 cases passed (124 ms)
-  // Your runtime beats 82.51 % of cpp submissions
-  // Your memory usage beats 36.1 % of cpp submissions (12.1 MB)
 };
 // @lc code=end
