@@ -48,7 +48,6 @@ public:
    * 104/104 cases passed (4 ms)
    * Your runtime beats 94.78 % of cpp submissions
    * Your memory usage beats 92.52 % of cpp submissions (19.6 MB)
-   *
    * @param root
    * @return int
    */
