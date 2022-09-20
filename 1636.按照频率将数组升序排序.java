@@ -23,15 +23,13 @@ class Solution {
       hash.put(num, hash.getOrDefault(num, 0) + 1);
     }
     var set = new TreeSet<Map.Entry<Integer, Integer>>(
-      (
-        (o1, o2) -> {
-          if (o1.getValue() != o2.getValue()) {
-            return o1.getValue() - o2.getValue();
-          } else {
-            return o2.getKey() - o1.getKey();
-          }
+      (o1, o2) -> {
+        if (o1.getValue() != o2.getValue()) {
+          return o1.getValue() - o2.getValue();
+        } else {
+          return o2.getKey() - o1.getKey();
         }
-      )
+      }
     ) {
       {
         addAll(hash.entrySet());
