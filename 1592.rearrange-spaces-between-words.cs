@@ -3,7 +3,7 @@
  *
  * [1592] Rearrange Spaces Between Words
  */
-
+namespace Leetcode.RearrangeSpacesBetweenWords;
 // @lc code=start
 using System.Text;
 
