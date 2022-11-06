@@ -4,6 +4,7 @@
  * [543] Diameter of Binary Tree
  */
 namespace Leetcode.DiameterOfBinaryTree;
+
 // @lc code=start
 /**
  * Definition for a binary tree node.
@@ -21,6 +22,7 @@ namespace Leetcode.DiameterOfBinaryTree;
 public class Solution
 {
     private int maxDiameter = 0;
+
     private void dfsCalc(TreeNode root)
     {
         if (root is null)
@@ -34,6 +36,7 @@ public class Solution
         root.val = Math.Max(leftLength, rightLength);
         maxDiameter = Math.Max(maxDiameter, leftLength + rightLength);
     }
+
     /// <summary>
     /// 104/104 cases passed (168 ms)
     /// Your runtime beats 22.83 % of csharp submissions
@@ -52,4 +55,3 @@ public class Solution
     }
 }
 // @lc code=end
-

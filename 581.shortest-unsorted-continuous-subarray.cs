@@ -4,6 +4,7 @@
  * [581] Shortest Unsorted Continuous Subarray
  */
 namespace Leetcode.ShortestUnsortedContinuousSubarray;
+
 // @lc code=start
 public class Solution
 {
@@ -44,4 +45,3 @@ public class Solution
     }
 }
 // @lc code=end
-

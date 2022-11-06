@@ -4,6 +4,7 @@
  * [1408] String Matching in an Array
  */
 namespace Leetcode.StringMatchingInAnArray;
+
 // @lc code=start
 public class Solution
 {
@@ -40,4 +41,3 @@ public class Solution
     }
 }
 // @lc code=end
-

@@ -4,6 +4,7 @@
  * [1624] Largest Substring Between Two Equal Characters
  */
 namespace Leetcode.LargestSubstringBetweenTwoEqualCharacters;
+
 // @lc code=start
 public class Solution
 {
@@ -33,4 +34,3 @@ public class Solution
     }
 }
 // @lc code=end
-

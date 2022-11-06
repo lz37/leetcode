@@ -5,6 +5,7 @@
  */
 
 namespace Leetcode.ConvertBST2GreaterTree;
+
 // @lc code=start
 /**
  * Definition for a binary tree node.
@@ -33,6 +34,7 @@ public class Solution
             return dfs(dfs(nodes, root.left), root.right);
         }
     }
+
     /// <summary>
     /// 215/215 cases passed (106 ms)
     /// Your runtime beats 89.39 % of csharp submissions
@@ -52,4 +54,3 @@ public class Solution
     }
 }
 // @lc code=end
-

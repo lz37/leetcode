@@ -4,6 +4,7 @@
  * [652] Find Duplicate Subtrees
  */
 namespace Leetcode.FindDuplicateSubtrees;
+
 // @lc code=start
 /**
  * Definition for a binary tree node.
@@ -37,6 +38,7 @@ public class Solution
         mp[str] = mp.TryGetValue(str, out count) ? count + 1 : 1;
         return str;
     }
+
     /// <summary>
     /// 175/175 cases passed (270 ms)
     /// Your runtime beats 61.11 % of csharp submissions
@@ -54,4 +56,3 @@ public class Solution
     }
 }
 // @lc code=end
-

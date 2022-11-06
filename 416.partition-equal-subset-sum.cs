@@ -5,6 +5,7 @@
  */
 
 namespace Leetcode.PartitionEqualSubsetSum;
+
 // @lc code=start
 public class Solution
 {
@@ -25,15 +26,17 @@ public class Solution
         var W = sum / 2; //相当于背包总承重
         var dp = new int[W + 1];
         dp[0] = 1;
-        Array.ForEach(nums, num =>
-        {
-            for (int i = W; i >= num; i--)
+        Array.ForEach(
+            nums,
+            num =>
             {
-                dp[i] = dp[i] + dp[i - num];
+                for (int i = W; i >= num; i--)
+                {
+                    dp[i] = dp[i] + dp[i - num];
+                }
             }
-        });
+        );
         return dp[W] != 0;
     }
 }
 // @lc code=end
-

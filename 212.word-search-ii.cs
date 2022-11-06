@@ -4,6 +4,7 @@
  * [212] Word Search II
  */
 namespace Leetcode.WordSearchII;
+
 // @lc code=start
 public class Solution
 {
@@ -12,6 +13,7 @@ public class Solution
         public TrieNode[] next = new TrieNode[26];
         public string? word;
     }
+
     /// <summary>
     /// <code>以words = ["oath","pea","eat","rain"]为例</code>
     /// 在root节点下生成o->a->t->h（最后一节点word=oath）及其他节点组成的树
@@ -56,13 +58,18 @@ public class Solution
         // visited
         board[i][j] = '#';
         // 四方延伸
-        if (i > 0) dfs(board, i - 1, j, p, res);
-        if (j > 0) dfs(board, i, j - 1, p, res);
-        if (i < board.Length - 1) dfs(board, i + 1, j, p, res);
-        if (j < board[0].Length - 1) dfs(board, i, j + 1, p, res);
+        if (i > 0)
+            dfs(board, i - 1, j, p, res);
+        if (j > 0)
+            dfs(board, i, j - 1, p, res);
+        if (i < board.Length - 1)
+            dfs(board, i + 1, j, p, res);
+        if (j < board[0].Length - 1)
+            dfs(board, i, j + 1, p, res);
         // not visited
         board[i][j] = c;
     }
+
     /// <summary>
     /// 64/64 cases passed (730 ms)
     /// Your runtime beats 71.19 % of csharp submissions
@@ -87,4 +94,3 @@ public class Solution
     }
 }
 // @lc code=end
-

@@ -4,6 +4,7 @@
  * [946] Validate Stack Sequences
  */
 namespace Leetcode.ValidateStackSequences;
+
 // @lc code=start
 public class Solution
 {
@@ -44,4 +45,3 @@ public class Solution
     }
 }
 // @lc code=end
-

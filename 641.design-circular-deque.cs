@@ -4,6 +4,7 @@
  * [641] Design Circular Deque
  */
 namespace Leetcode.DesignCircularDeque;
+
 // @lc code=start
 /// <summary>
 /// 51/51 cases passed (234 ms)
@@ -17,6 +18,7 @@ public class MyCircularDeque
     private int num;
     private DqNode? front;
     private DqNode? rear;
+
     private class DqNode
     {
         public int val;
@@ -152,4 +154,3 @@ public class MyCircularDeque
  * bool param_8 = obj.IsFull();
  */
 // @lc code=end
-

@@ -4,6 +4,7 @@
  * [461] Hamming Distance
  */
 namespace Leetcode.HammingDistance;
+
 // @lc code=start
 public class Solution
 {
@@ -26,4 +27,3 @@ public class Solution
     }
 }
 // @lc code=end
-

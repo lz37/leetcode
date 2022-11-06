@@ -4,15 +4,18 @@
  * [698] Partition to K Equal Sum Subsets
  */
 namespace Leetcode.Partition2KEqualSumSubsets;
+
 // @lc code=start
 public class Solution
 {
     private int[] nums;
+
     /// <summary>
     /// 表示当前每个子集的和
     /// </summary>
     private int[] cur;
     private int sum;
+
     /// <summary>
     /// 从最后一个元素开始，依次尝试将其加入到 cur 的每个子集中。这里如果将 nums[i] 加入某个子集 cur[j] 后，子集的和超过 sum，说明无法放入，可以直接跳过；另外，如果 cur[j] 与 cur[j - 1] 相等，意味着我们在 cur[j - 1] 的时候已经完成了搜索，也可以跳过当前的搜索
     /// </summary>
@@ -40,6 +43,7 @@ public class Solution
         }
         return false;
     }
+
     /// <summary>
     /// 162/162 cases passed (173 ms)
     /// Your runtime beats 98.59 % of csharp submissions
@@ -63,4 +67,3 @@ public class Solution
     }
 }
 // @lc code=end
-

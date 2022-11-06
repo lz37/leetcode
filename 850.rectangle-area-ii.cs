@@ -4,10 +4,12 @@
  * [850] Rectangle Area II
  */
 namespace Leetcode.RectangleAreaII;
+
 // @lc code=start
 public class Solution
 {
     private const int Mod = 1000000007;
+
     /// <summary>
     /// 78/78 cases passed (84 ms)
     /// Your runtime beats 100 % of csharp submissions
@@ -42,21 +44,23 @@ public class Solution
             // 右边界
             sweep.Add(new int[] { rectangles[i][2], i, -1 });
         }
-        sweep.Sort((a, b) =>
-        {
-            if (a[0] != b[0])
+        sweep.Sort(
+            (a, b) =>
             {
-                return a[0] - b[0];
+                if (a[0] != b[0])
+                {
+                    return a[0] - b[0];
+                }
+                else if (a[1] != b[1])
+                {
+                    return a[1] - b[1];
+                }
+                else
+                {
+                    return a[2] - b[2];
+                }
             }
-            else if (a[1] != b[1])
-            {
-                return a[1] - b[1];
-            }
-            else
-            {
-                return a[2] - b[2];
-            }
-        });
+        );
         var ans = 0L;
         for (var i = 0; i < sweep.Count; ++i)
         {
@@ -100,4 +104,3 @@ public class Solution
     }
 }
 // @lc code=end
-

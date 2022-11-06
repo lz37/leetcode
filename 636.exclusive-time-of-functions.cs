@@ -4,6 +4,7 @@
  * [636] Exclusive Time of Functions
  */
 namespace Leetcode.ExclusiveTimeOfFunctions;
+
 // @lc code=start
 public class Solution
 {
@@ -50,4 +51,3 @@ public class Solution
     }
 }
 // @lc code=end
-

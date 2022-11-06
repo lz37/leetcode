@@ -4,6 +4,7 @@
  * [448] Find All Numbers Disappeared in an Array
  */
 namespace Leetcode.FindAllNumbersDisappearedInAnArray;
+
 // @lc code=start
 public class Solution
 {
@@ -50,4 +51,3 @@ public class Solution
     }
 }
 // @lc code=end
-

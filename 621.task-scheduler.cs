@@ -4,6 +4,7 @@
  * [621] Task Scheduler
  */
 namespace Leetcode.TaskScheduler;
+
 // @lc code=start
 public class Solution
 {
@@ -13,7 +14,9 @@ public class Solution
         for (var i = 'A'; i <= 'Z'; i++)
         {
             var hashI = hash.TryGetValue(i, out var count) ? count : 0;
-            var hashMostChar = hash.TryGetValue(mostChar, out var countMostChar) ? countMostChar : 0;
+            var hashMostChar = hash.TryGetValue(mostChar, out var countMostChar)
+                ? countMostChar
+                : 0;
             if (hashI > hashMostChar)
             {
                 mostChar = i;
@@ -21,6 +24,7 @@ public class Solution
         }
         return mostChar;
     }
+
     /// <summary>
     /// 71/71 cases passed (212 ms)
     /// Your runtime beats 80.92 % of csharp submissions
@@ -37,7 +41,8 @@ public class Solution
             hash[task] = hash.TryGetValue(task, out var c) ? c + 1 : 1;
         }
         char mostChar;
-        int length = 0, mostTasks = 0;
+        int length = 0,
+            mostTasks = 0;
         while (hash[mostChar = findMostChar(hash)] != 0)
         {
             if (mostTasks == 0)
@@ -55,4 +60,3 @@ public class Solution
     }
 }
 // @lc code=end
-

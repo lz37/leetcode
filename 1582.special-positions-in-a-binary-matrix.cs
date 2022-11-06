@@ -4,6 +4,7 @@
  * [1582] Special Positions in a Binary Matrix
  */
 namespace Leetcode.SpecialPositionsInABinaryMatrix;
+
 // @lc code=start
 public class Solution
 {
@@ -46,4 +47,3 @@ public class Solution
     }
 }
 // @lc code=end
-

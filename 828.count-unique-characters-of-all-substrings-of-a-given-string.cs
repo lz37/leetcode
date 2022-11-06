@@ -4,6 +4,7 @@
  * [828] Count Unique Characters of All Substrings of a Given String
  */
 namespace Leetcode.CountUniqueCharactersOfAllSubstringsOfAGivenString;
+
 // @lc code=start
 public class Solution
 {
@@ -43,4 +44,3 @@ public class Solution
     }
 }
 // @lc code=end
-

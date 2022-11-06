@@ -4,6 +4,7 @@
  * [1475] Final Prices With a Special Discount in a Shop
  */
 namespace Leetcode.FinalPricesWithASpecialDiscountInAShop;
+
 // @lc code=start
 public class Solution
 {
@@ -32,4 +33,3 @@ public class Solution
     }
 }
 // @lc code=end
-

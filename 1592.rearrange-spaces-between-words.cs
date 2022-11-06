@@ -18,6 +18,7 @@ public class Solution
         }
         return sb.ToString();
     }
+
     public string ReorderSpaces(string text)
     {
         var beginAndEnd = new List<KeyValuePair<int, int>>();
@@ -46,7 +47,8 @@ public class Solution
         if (wordsNum == 1)
         {
             var word = beginAndEnd[0];
-            return text.AsSpan(word.Key, word.Value - word.Key).ToString() + makeSpaces(text.Length - (word.Value - word.Key));
+            return text.AsSpan(word.Key, word.Value - word.Key).ToString()
+                + makeSpaces(text.Length - (word.Value - word.Key));
         }
         var gapSpaces = makeSpaces(spacesNum / (wordsNum - 1));
         var lastSpaces = makeSpaces(spacesNum - gapSpaces.Length * (wordsNum - 1));
@@ -68,4 +70,3 @@ public class Solution
     }
 }
 // @lc code=end
-

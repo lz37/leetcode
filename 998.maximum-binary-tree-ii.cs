@@ -4,6 +4,7 @@
  * [998] Maximum Binary Tree II
  */
 namespace Leetcode.MaximumBinaryTreeII;
+
 // @lc code=start
 /**
  * Definition for a binary tree node.
@@ -32,6 +33,7 @@ public class Solution
         }
         return res;
     }
+
     private List<TreeNode> getA(List<TreeNode> a, int index)
     {
         if (a.Count == 0)
@@ -51,6 +53,7 @@ public class Solution
         }
         return a;
     }
+
     private TreeNode getConstructB(List<TreeNode> toB, int rootPos)
     {
         var root = toB[rootPos];
@@ -66,6 +69,7 @@ public class Solution
         }
         return root;
     }
+
     /// <summary>
     /// 75/75 cases passed (121 ms)
     /// Your runtime beats 80 % of csharp submissions
@@ -87,4 +91,3 @@ public class Solution
     }
 }
 // @lc code=end
-

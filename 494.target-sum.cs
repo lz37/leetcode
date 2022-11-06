@@ -4,6 +4,7 @@
  * [494] Target Sum
  */
 namespace Leetcode.TargetSum;
+
 // @lc code=start
 public class Solution
 {
@@ -40,4 +41,3 @@ public class Solution
     }
 }
 // @lc code=end
-

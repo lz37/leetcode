@@ -4,6 +4,7 @@
  * [687] Longest Univalue Path
  */
 namespace Leetcode.LongestUnivaluePath;
+
 // @lc code=start
 /**
  * Definition for a binary tree node.
@@ -21,6 +22,7 @@ namespace Leetcode.LongestUnivaluePath;
 public class Solution
 {
     private int max = 0;
+
     private int dfs(TreeNode node)
     {
         if (node is null)
@@ -54,6 +56,7 @@ public class Solution
         max = Math.Max(max, leftLength + rightLength);
         return Math.Max(leftLength, rightLength);
     }
+
     /// <summary>
     /// 71/71 cases passed (234 ms)
     /// Your runtime beats 81.33 % of csharp submissions
@@ -68,4 +71,3 @@ public class Solution
     }
 }
 // @lc code=end
-

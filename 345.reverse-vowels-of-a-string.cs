@@ -6,11 +6,14 @@
 using System.Text;
 
 namespace Leetcode.ReverseVowelsOfAString;
+
 // @lc code=start
 public class Solution
 {
+    private static readonly ISet<char> vowels = new HashSet<char>(
+        new char[] { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' }
+    );
 
-    private static readonly ISet<char> vowels = new HashSet<char>(new char[] { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' });
     /// <summary>
     /// 480/480 cases passed (141 ms)
     /// Your runtime beats 64.34 % of csharp submissions
@@ -41,28 +44,36 @@ public class Solution
         return new string(chars);
     }
 }
+
 // @lc code=end
 public class MySolution
 {
+    private static readonly char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+    private bool isOfVowels(char ch)
+    {
+        var res = false;
+        vowels
+            .ToList()
+            .ForEach(
+                (c) =>
+                {
+                    if (char.ToLower(ch) == c)
+                    {
+                        res = true;
+                    }
+                }
+            );
+        return res;
+    }
+
     /// <summary>
     /// 480/480 cases passed (231 ms)
     /// Your runtime beats 18.22 % of csharp submissions
     /// Your memory usage beats 24.81 % of csharp submissions (41.1 MB)
     /// </summary>
-    /// <value></value>
-    private static readonly char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
-    private bool isOfVowels(char ch)
-    {
-        var res = false;
-        vowels.ToList().ForEach((c) =>
-        {
-            if (char.ToLower(ch) == c)
-            {
-                res = true;
-            }
-        });
-        return res;
-    }
+    /// <param name="s"></param>
+    /// <returns></returns>
     public string ReverseVowels(string s)
     {
         var vowelsPoses = new List<int>();
@@ -76,7 +87,10 @@ public class MySolution
         var sBuilder = new StringBuilder(s);
         for (int i = 0; i < vowelsPoses.Count / 2; i++)
         {
-            (sBuilder[vowelsPoses[i]], sBuilder[vowelsPoses[vowelsPoses.Count - 1 - i]]) = (sBuilder[vowelsPoses[vowelsPoses.Count - 1 - i]], sBuilder[vowelsPoses[i]]);
+            (sBuilder[vowelsPoses[i]], sBuilder[vowelsPoses[vowelsPoses.Count - 1 - i]]) = (
+                sBuilder[vowelsPoses[vowelsPoses.Count - 1 - i]],
+                sBuilder[vowelsPoses[i]]
+            );
         }
         return sBuilder.ToString();
     }

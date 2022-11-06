@@ -4,6 +4,7 @@
  * [646] Maximum Length of Pair Chain
  */
 namespace Leetcode.MaximumLengthOfPairChain;
+
 // @lc code=start
 public class Solution
 {
@@ -27,4 +28,3 @@ public class Solution
     }
 }
 // @lc code=end
-

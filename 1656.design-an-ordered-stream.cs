@@ -4,6 +4,7 @@
  * [1656] Design an Ordered Stream
  */
 namespace Leetcode.DesignAnOrderedStream;
+
 // @lc code=start
 /// <summary>
 /// 101/101 cases passed (631 ms)
@@ -55,4 +56,3 @@ public class OrderedStream
  * IList<string> param_1 = obj.Insert(idKey,value);
  */
 // @lc code=end
-

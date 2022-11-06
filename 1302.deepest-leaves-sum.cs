@@ -4,6 +4,7 @@
  * [1302] Deepest Leaves Sum
  */
 namespace Leetcode.DeepestLeavesSum;
+
 // @lc code=start
 /**
  * Definition for a binary tree node.
@@ -58,4 +59,3 @@ public class Solution
     }
 }
 // @lc code=end
-

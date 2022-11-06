@@ -4,6 +4,7 @@
  * [437] Path Sum III
  */
 namespace Leetcode.PathSumIII;
+
 // @lc code=start
 /**
  * Definition for a binary tree node.
@@ -22,6 +23,7 @@ public class Solution
 {
     private int count = 0;
     private int target;
+
     private void dfs(TreeNode root)
     {
         if (root is null)
@@ -32,6 +34,7 @@ public class Solution
         dfs(root.left);
         dfs(root.right);
     }
+
     private void subDfs(TreeNode root, TreeNode child, long val)
     {
         if (val == target)
@@ -47,6 +50,7 @@ public class Solution
             subDfs(root, child.right, val + child.right.val);
         }
     }
+
     /// <summary>
     /// 128/128 cases passed (168 ms)
     /// Your runtime beats 56.01 % of csharp submissions
@@ -63,4 +67,3 @@ public class Solution
     }
 }
 // @lc code=end
-

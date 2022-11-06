@@ -1,10 +1,10 @@
-using System.Collections.Generic;
 /*
  * @lc app=leetcode id=560 lang=csharp
  *
  * [560] Subarray Sum Equals K
  */
 namespace Leetcode.SubarraySumEqualsK;
+
 // @lc code=start
 public class Solution
 {
@@ -36,4 +36,3 @@ public class Solution
     }
 }
 // @lc code=end
-

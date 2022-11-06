@@ -4,6 +4,7 @@
  * [1636] Sort Array by Increasing Frequency
  */
 namespace Leetcode.SortArrayByIncreasingFrequency;
+
 // @lc code=start
 public class Solution
 {
@@ -21,8 +22,11 @@ public class Solution
         {
             hash[num] = hash.ContainsKey(num) ? hash[num] + 1 : 1;
         }
-        var set = new SortedSet<KeyValuePair<int, int>>(Comparer<KeyValuePair<int, int>>.Create((o1, o2) =>
-        (o1.Value != o2.Value) ? o1.Value - o2.Value : o2.Key - o1.Key));
+        var set = new SortedSet<KeyValuePair<int, int>>(
+            Comparer<KeyValuePair<int, int>>.Create(
+                (o1, o2) => (o1.Value != o2.Value) ? o1.Value - o2.Value : o2.Key - o1.Key
+            )
+        );
         hash.AsEnumerable().ToList().ForEach(o => set.Add(o));
         var res = new int[nums.Length];
         var i = 0;
@@ -38,4 +42,3 @@ public class Solution
     }
 }
 // @lc code=end
-

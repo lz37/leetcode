@@ -4,6 +4,7 @@
  * [406] Queue Reconstruction by Height
  */
 namespace Leetcode.QueueReconstructionByHeight;
+
 // @lc code=start
 public class Solution
 {
@@ -16,15 +17,18 @@ public class Solution
     /// <returns></returns>
     public int[][] ReconstructQueue(int[][] people)
     {
-        Array.Sort(people, (p1, p2) =>
-        {
-            if (p1[0] == p2[0])
+        Array.Sort(
+            people,
+            (p1, p2) =>
             {
-                // if height value is the same, then sort by k in raising powers
-                return p1[1] - p2[1];
+                if (p1[0] == p2[0])
+                {
+                    // if height value is the same, then sort by k in raising powers
+                    return p1[1] - p2[1];
+                }
+                return p2[0] - p1[0]; // sort by height in descending powers
             }
-            return p2[0] - p1[0]; // sort by height in descending powers
-        });
+        );
         var res = new LinkedList<int[]>();
         foreach (var p in people)
         {
@@ -47,5 +51,3 @@ public class Solution
     }
 }
 // @lc code=end
-
-
